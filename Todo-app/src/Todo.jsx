@@ -13,8 +13,7 @@ function Todo({ setDark, dark }) {
   const [todo, setTodo] = useState({});
 
   const fetchTodos = () => {
-    axios
-      .get("http://localhost:5000/get")
+      axios.get("http://127.0.0.1:5000/get")
       .then((result) => setTodos(result.data))
       .catch((err) => console.log(err));
   };
@@ -63,7 +62,7 @@ function Todo({ setDark, dark }) {
   };
 
   return (
-    <div className="grid place-content-center pt-40 relative">
+    <div className="grid place-content-center lg:pt-40 md:pt-20 sm:pt-10 relative">
       <div className="flex justify-between items-center mb-5 ">
         <h1 className="text-5xl font-bold text-white">T O D O</h1>
         <button onClick={() => setDark(!dark)}>

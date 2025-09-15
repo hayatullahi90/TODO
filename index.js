@@ -1,5 +1,4 @@
 import express from "express";
-import mongoose from "mongoose";
 import cors from "cors";
 import todoModel from "./models/todo.js";
 import connectDB from "./Config/db.js";
